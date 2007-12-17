@@ -13,7 +13,6 @@ BuildRequires:	perl-XML-Filter-SAXT
 BuildArch:	noarch
 Provides:	perl-libxml-enno
 Obsoletes:	perl-libxml-enno
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 This a PerlSAX filter that detects which character data contains
