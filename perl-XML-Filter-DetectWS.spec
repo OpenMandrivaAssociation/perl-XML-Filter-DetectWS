@@ -1,26 +1,28 @@
-%define real_name XML-Filter-DetectWS
+%define upstream_name    XML-Filter-DetectWS
+%define upstream_version 0.01
+
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
+Release:	%mkrel 1
 
 Summary:	XML::Filter::DetectWS - a PerlSAX filter that detects ignorable whitespace
-Name:		perl-%{real_name}
-Version:	0.01
-Release:	%mkrel 5
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{real_name}
-Source0:	http://search.cpan.org/CPAN/authors/id/T/TJ/TJMATHER/%{real_name}-%{version}.tar.bz2
-BuildRequires:	perl-devel
+URL:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://search.cpan.org/CPAN/authors/id/T/TJ/TJMATHER/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildRequires:	perl-XML-Filter-SAXT
 BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 Provides:	perl-libxml-enno
 Obsoletes:	perl-libxml-enno
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 This a PerlSAX filter that detects which character data contains
 ignorable whitespace and optionally filters it.
 
 %prep
-%setup -q -n %{real_name}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -39,5 +41,3 @@ rm -rf %{buildroot}
 %doc Changes README
 %{perl_vendorlib}/XML/Filter/DetectWS.pm
 %{_mandir}/*/*
-
-
