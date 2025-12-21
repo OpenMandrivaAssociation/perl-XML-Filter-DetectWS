@@ -10,6 +10,7 @@ Group:		Development/Perl
 Url:	https://search.cpan.org/dist/%{modname}
 Source0:	http://search.cpan.org/CPAN/authors/id/T/TJ/TJMATHER/%{modname}-%{modver}.tar.bz2
 BuildArch:	noarch
+BuildRequires:	make
 BuildRequires:	perl(Test)
 BuildRequires:	perl-devel
 BuildRequires:	perl-XML-Filter-SAXT
