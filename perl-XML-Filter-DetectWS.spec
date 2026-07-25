@@ -3,12 +3,12 @@
 
 Summary:	XML::Filter::DetectWS - a PerlSAX filter that detects ignorable whitespace
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	16
+Version:	%{modver}
+Release:	17
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:	https://search.cpan.org/dist/%{modname}
-Source0:	http://search.cpan.org/CPAN/authors/id/T/TJ/TJMATHER/%{modname}-%{modver}.tar.bz2
+Url:	https://metacpan.org/dist/XML-Filter-DetectWS
+Source0:	https://cpan.metacpan.org/authors/id/T/TJ/TJMATHER/XML-Filter-DetectWS-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	make
 BuildRequires:	perl(Test)
